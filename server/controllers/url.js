@@ -8,6 +8,7 @@ async function createShortUrl(req, res) {
 
     // checking if the url is valid or not
     if(!validateUrl(url)) {
+        console.log("Check url")
         res.status(400).json({message: 'Invalid URL'})
         return
     }
